@@ -1,6 +1,6 @@
 # This file is responsible for configuring your application
 # and its dependencies with the aid of the Mix.Config module.
-use Mix.Config
+import Config
 
 # This configuration is loaded before any dependency and is restricted
 # to this project. If another project depends on this project, this
@@ -30,6 +30,6 @@ use Mix.Config
 
 config :filtrex, ecto_repos: [Filtrex.Repo]
 
-if Mix.env == :test do
+if Mix.env() == :test do
   import_config "test.exs"
 end
